@@ -107,7 +107,7 @@ public class MariaDBProvider extends SQLProviderAdapter<MariaDBGlobalState, Mari
             assert nextAction != null;
             assert nrRemaining[nextAction.ordinal()] > 0;
             nrRemaining[nextAction.ordinal()]--;
-            SQLQueryAdapter query;
+            SQLQueryAdapter query = null;
             try {
                 switch (nextAction) {
                 case CHECKSUM:
